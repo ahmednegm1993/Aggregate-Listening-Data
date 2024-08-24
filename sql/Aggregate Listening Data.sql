@@ -1,0 +1,1 @@
+select  user_id,count (Distinct(song_id)) AS unique_song_count ,ROUND(sum(listen_duration/60),0) AS total_listen_duration from Table_1 Group BY user_id order by total_listen_duration desc ; 
